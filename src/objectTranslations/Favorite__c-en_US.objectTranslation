@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Favorite</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Favorites</value>
+    </caseValues>
+    <fields>
+        <label><!-- Contact --></label>
+        <name>Contact__c</name>
+        <relationshipLabel><!-- Favorites --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Favorite Name --></label>
+        <name>Favorite_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Offer --></label>
+        <name>Offer__c</name>
+        <relationshipLabel><!-- Favorites --></relationshipLabel>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

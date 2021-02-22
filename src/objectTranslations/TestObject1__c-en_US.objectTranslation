@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>TestObject1</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>TestObject1s</value>
+    </caseValues>
+    <fields>
+        <label><!-- DaysFromSomeOldDate --></label>
+        <name>DaysFromSomeOldDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- SomeOldDate --></label>
+        <name>SomeOldDate__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>
