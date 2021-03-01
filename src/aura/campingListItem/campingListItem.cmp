@@ -4,23 +4,16 @@
                     required="true"/>
     <p>Name: {!v.item.Name}</p>
 
-    <p>Price:
-        <lightning:formattedNumber value="{!v.item.Price__c}" style="currency"/>
-    </p>
-    <p>Quantity:
-        <lightning:formattedNumber value="{!v.item.Quantity__c}" maximumFractionDigits="0"/>
-    </p>
-    <p>
-        <lightning:input type="toggle"
+    <p>Price:<lightning:formattedNumber value="{!v.item.Price__c}" style="currency"/></p>
+    <p>Quantity:<lightning:formattedNumber value="{!v.item.Quantity__c}" maximumFractionDigits="0"/></p>
+    <p><lightning:input type="toggle"
                          label="Packed?"
                          name="packed"
-                         checked="{!v.item.Packed__c}"/>
+                         checked="{!v.item.Packed__c}"/></p>
         
-                         <div>
-                            <lightning:button label="Packed!"
-                                disabled="false"
-                                onclick="{!c.packItem}"/>                    
-                        </div>
-    </p>
-
+    <div>
+    <lightning:button label="Packed!"
+        disabled="false"
+        onclick="{!c.packItem}"/>                    
+    </div>
 </aura:component>
