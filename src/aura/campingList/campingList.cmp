@@ -1,8 +1,47 @@
-<aura:component >
-    <ol>
-        <li>Bug Spray</li>
-        <li>Bear Repellent</li>
-        <li>Goat Food</li>
-    </ol>
+<aura:component>
+    <aura:attribute name="items" type="Camping_Item__c[]"/>
+    <aura:attribute name="newItem" type="Camping_Item__c"
+        default="{ 'sObjectType' : 'Camping_Item__c',
+                    'Name' : '',
+                    'Quantity__c' : '0',
+                    'Price__c' : '0',
+                    'Packed__c' : 'false'}"/>
+
+    <fieldset class="slds-box slds-theme_default slds-container_small">
+    <legend id="newcampingitem" class="slds-text-heading_small
+          slds-p-vertical_medium">
+          Add Camping Item
+    </legend>
+    <form class="slds-form_stacked">
+        <lightning:input aura:id="campingitemform" label="Name"
+                         name="campingitemname"
+                         value="{!v.newItem.Name}"/>
+        <lightning:input aura:id="campingitemform" label="Quantity" type="number"
+                         min='1'
+                         name="campingitemquantity"
+                         value="{!v.newItem.Quantity__c}"
+                         />
+        <lightning:input aura:id="campingitemform" label="Price"  type="number"
+                         formatter="currency"
+                         name="campingitemprice"
+                         value="{!v.newItem.Price__c}"
+                         />
+        <lightning:input aura:id="campingitemform" label="Packed"
+                         name="campingitempacked"
+                         type="checkbox"
+                         checked="{!v.newItem.Packed__c}"
+                         />
+        <lightning:button label="createCampingItem "
+                          class="slds-m-top_medium"
+                          variant="brand"
+                          onclick="{!c.clickCreateItem}"/>
+    </form>
+
+    </fieldset>
+    <aura:iteration items="{!v.items}" var="item">
+        <c:campingListItem item="{!v.item}"/>
+    </aura:iteration>
+
+
 	
 </aura:component>

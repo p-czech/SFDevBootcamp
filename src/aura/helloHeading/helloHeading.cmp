@@ -1,3 +1,8 @@
 <aura:component>
-    <h1>W E L C O M E</h1>
+    <lightning:layout class="slds-page-header slds-page-header_object-home">
+        <lightning:layoutItem>
+            <lightning:icon iconName="action:goal"/>
+            <h1 class="slds-text-heading_label">W E L C O M E</h1>
+        </lightning:layoutItem>
+    </lightning:layout>
 </aura:component>

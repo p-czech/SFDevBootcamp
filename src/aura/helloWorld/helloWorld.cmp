@@ -1,3 +1,5 @@
 <aura:component >
-    <c:helloMessageInteractive/>
+    <c:helloHeading/>
+    <c:campingList/>
+    
 </aura:component>
