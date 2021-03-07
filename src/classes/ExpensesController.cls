@@ -4,7 +4,8 @@ public with sharing class ExpensesController {
     public static List<Expense__c> getExpenses(){
         try {
             return [SELECT Id, Name, Amount__c, Client__c, Date__c,
-            Reimbursed__c, CreatedDate FROM Expense__c];
+            Reimbursed__c, CreatedDate FROM Expense__c
+            ORDER BY CreatedDate DESC, LastModifiedDate DESC];
             
         } catch (Exception e) {
             throw new AuraHandledException(e.getMessage());
